@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="main2">
+            <nav>
+                <a href="#">Menu</a>
+                <a href="index.html">Home</a>
+                <a href="aboutUs.html">About us</a>
+                <!-- <a class="sign" href="index.html">Sign up</a> -->
+                <a href="feedback.html">Feedback</a>
+                <a href="index.html">Login</a></a>
+            </nav>
+            <div class="container">
+                <div class="login">
+                    <br><br>
+                    Select Ticket
+                    <select name="select ticket" id="opt">
+                        <option value="General Entry" selected>General Entry</option>
+                        <option value="Student">Student</option>
+                        <option value="Family Pass">Family Pass</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                    <br><br><br>
+                    Location
+                    <select name="Location">
+                        <option value="Kiran Nadar Museum of Art">Kiran Nadar Museum of Art</option>
+                        <option value="Jio World Convention Centre">Jio World Convention Centre</option>
+                        <option value="National Museum New Delhi">National Museum New Delhi</option>
+                        <option value="Indian Museum Kolkata">Indian Museum Kolkata</option>
+                    </select>
+
+                    <br>
+                    <input type="date" placeholder="Visit Date">
+                    <br>
+                    <label class="vCount"  for="visitorsCount">
+                        <input type="number" id="hh"
+                            placeholder="No. of Visiters(adults/children/senior)">
+                    </label>
+                    <br>
+                    <div class="tol">
+                        <div class="total">Total:</div>
+                        <div class="rs" id="total-display"  >00 ₹ </div>
+                    </div>
+                    <div id="book">
+
+                        <button id="rzp-button" type="button">BOOK NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="mytic">
+            <div class="mytic2">
+                <p>My Tickets</p>
+            </div>
+            <div class="museum">
+                <p>Looking for Museum Guide</p>
+            </div>
+        </div>
+        <div class="ticks">
+            <div class="tickets">
+                <div class="tic">
+                    <p>Ticket Booking
+                        <br> Assistance
+                    </p>
+                </div>
+                <div class="tic">
+                    <p>Special Event
+                        <br>Tickets
+                    </p>
+                </div>
+                <div class="tic">
+                    <p>Upcoming <br> Event & Exhibit</p>
+                </div>
+            </div>
+            <br><br>
+            <div class="visitor">
+                <div class="vis">
+                    <p>Visitor Support<br></p>
+                </div>
+                <div class="vis">
+                    <p>Notifications <br> & Reminders</p>
+                </div>
+                <div class="vis"> Report</div>
+            </div>
+        </div>
+        <div class="type">
+            <input type="text" placeholder="Type Here...">
+        </div>
+    </div> -->
+    <script src="app.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

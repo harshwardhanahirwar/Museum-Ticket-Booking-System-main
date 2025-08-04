@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Museum Feedback Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      max-width: 500px;
+      width: 100%;
+    }
+    .card h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question p {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    .stars {
+      display: flex;
+      gap: 5px;
+    }
+    .stars button {
+      background-color: #e5e7eb;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .stars button.active {
+      background-color: #fbbf24;
+    }
+    .stars button:hover {
+      background-color: #fde047;
+    }
+    .submit-button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .submit-button:hover {
+      background-color: #2563eb;
+    }
+    .thank-you {
+      text-align: center;
+      color: #10b981;
+    }
+    .thank-you h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    .thank-you p {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="app">
+  <div class="card" id="feedback-form">
+    <h1>Feedback Form</h1>
+    <form id="form">
+      <div class="question">
+        <p>How would you rate the ease of booking tickets?</p>
+        <div class="stars" data-index="0">
+          <button type="button" class="star">&#9733;</button>
+          <button type="button" class="star">&#9733;</button>
+          <button type="button" class="star">&#9733;</button>
+          <button type="button" class="star">&#9733;</button>
+          <button type="button" class="star">&#9733;</button>
+        </div>
+      </div>
+      <div class="question">
+        <p>How satisfied are you with the ticket pricing?</p>
+        <div class="stars" data-index="1">
+          <button type="button" class="star">&#9733;</button>
+          <button type="button" class="star">&#9733;</button>
+          <button type="button" class="star">&#9733;</button>
+          <button type="button" class="star">&#9733;</button>
+          <button type="button" class="star">&#9733;</button>
+        </div>
+      </div>
+      <div class="question">
+        <p>How was the overall experience during your visit?</p>
+        <div class="stars" data-index="2">
+          <button type="button" class="star">&#9733;</button>
+          <button type="button" class="star">&#9733;</button>
+          <button type="button" class="star">&#9733;</button>
+          <button type="button" class="star">&#9733;</button>
+          <button type="button" class="star">&#9733;</button>
+        </div>
+      </div>
+      <div class="question">
+        <p>How would you rate the museum facilities?</p>
+        <div class="stars" data-index="3">
+          <button type="button" class="star">&#9733;</button>
+          <button type="button" class="star">&#9733;</button>
+          <button type="button" class="star">&#9733;</button>
+          <button type="button" class="star">&#9733;</button>
+          <button type="button" class="star">&#9733;</button>
+        </div>
+      </div>
+      <div class="question">
+        <p>Would you recommend our museum to others?</p>
+        <div class="stars" data-index="4">
+          <button type="button" class="star">&#9733;</button>
+          <button type="button" class="star">&#9733;</button>
+          <button type="button" class="star">&#9733;</button>
+          <button type="button" class="star">&#9733;</button>
+          <button type="button" class="star">&#9733;</button>
+        </div>
+      </div>
+      <button type="button" class="submit-button" id="submit">Submit Feedback</button>
+    </form>
+  </div>
+  <div class="thank-you" id="thank-you" style="display: none;">
+    <h1>Thank You!</h1>
+    <p>We appreciate your feedback.</p>
+  </div>
+</div>
+
+<script>
+  const stars = document.querySelectorAll('.stars');
+  const ratings = Array(stars.length).fill(0);
+
+  stars.forEach((starGroup, index) => {
+    starGroup.addEventListener('click', (event) => {
+      if (event.target.tagName === 'BUTTON') {
+        const rating = Array.from(starGroup.children).indexOf(event.target) + 1;
+        ratings[index] = rating;
+        starGroup.querySelectorAll('button').forEach((btn, idx) => {
+          btn.classList.toggle('active', idx < rating);
+        });
+      }
+    });
+  });
+
+  document.getElementById('submit').addEventListener('click', () => {
+    document.getElementById('feedback-form').style.display = 'none';
+    document.getElementById('thank-you').style.display = 'block';
+  });
+</script>
+
+</body>
+</html>

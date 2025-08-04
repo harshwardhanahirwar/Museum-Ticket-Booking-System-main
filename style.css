@@ -1,0 +1,321 @@
+body,html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+/* .main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+} */
+.main2{
+    height: 100%;
+    width: 100%;
+    /* background-image: url("https://pbs.twimg.com/media/Cex8BlpWEAAPRED.jpg:large"); */
+    /* background-image: url("https://static.vecteezy.com/system/resources/previews/029/573/477/non_2x/headphones-for-listening-to-music-and-enjoying-the-bass-and-beats-bright-arc-headphones-free-photo.jpg"); */
+    background-size: cover;
+}
+nav{
+    height: 20px;
+    margin-right: 10px;
+    justify-content: flex-end;
+    gap: 20px;
+    
+}
+nav a{
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
+nav a:active{
+    transform: scale(0.9);
+    text-decoration: none;
+    color: black;
+}
+.container{
+    height: 400px;
+    width: 370px;
+    display: flex;
+    justify-content: center;
+    margin-left: 35%;
+    margin-top: 10%;
+    background-color:black;
+    opacity: 0.8;
+    color: white;
+    border-radius: 20px;
+}
+.login{
+    height: 360px;
+    width: 320px;
+    background-color:black; 
+    border-radius: 15px;
+    align-items: center;
+    position: relative;
+    color:white;
+    
+}
+.login input{
+    
+    border: none;
+    background-color: black;
+    border-bottom: 2px solid white;
+    width: 99%;
+    font-size: 15px;
+    margin-top: 40px;
+    height:20px;
+    outline: none;
+    color: white;
+    
+}
+select option{
+    background-color: rgba(24, 23, 23,0.3);
+    
+}
+.tol{
+    display: flex;
+}
+.total{
+    margin-top: 30px;
+    height: 30px;
+    width: 100%;
+    
+}
+.rs{
+    height: 30px;
+    width: 100%;
+    margin-top: 30px;
+}
+#book{
+    height: 30px;
+    width: 100%;
+    margin-top: 30px;
+    background-color: rgb(0, 225, 255);
+    border-bottom: 0;
+    outline: none;
+    border-radius: 20px;
+}
+#book:active{
+    transform: scale(0.95);
+}
+
+
+#book ::placeholder{
+    color: white;
+} 
+ button{
+    height: 30px;
+    width: 85%;
+    margin-left: 18px;
+    background-color: rgb(0, 225, 255);
+    border-bottom: 0;
+    outline: none;
+    color: rgb(255, 255, 255);
+    border: none;
+    font-weight: bold;
+ }
+ .mytic{
+height: 130px;
+width: 100%;
+background-color:black;
+ }
+ .mytic2{
+    height: 40px;
+    width: 100%;
+    background-color: rgb(234, 142, 142);
+    color: white;
+
+ }
+ .museum{
+    height: 40px;
+    width: 100%;
+background-color: cornflowerblue;
+color: white;
+ }
+ .ticks{
+    height: 480px;
+    width: 100%;
+    background-color: black;
+ }
+ .tickets{
+    height: 220px;
+    width: 100%;
+    display: flex;
+    background-color: black;
+    justify-content: space-between;
+    text-align: center;
+ }
+ .tic{
+    height: 200px;
+    width: 250px;
+    
+    background-color: rgb(201, 196, 196);
+    font-size: 30px;
+    
+    text-align: center;
+ }
+ .tic:hover{
+    box-shadow: 6px 8px 10px gray;
+    height:203px ;
+    width: 253px;
+ }
+ .visitor{
+    height: 220px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+ }
+ .vis{
+    height: 200px;
+    width: 250px;
+    background-color: rgb(201, 196, 196);
+    font-size: 30px;
+    align-items: center;
+ }
+ .vis:hover{
+    box-shadow: 6px 8px  10px gray;
+    height:203px ;
+    width: 253px;
+ }
+ .type{
+    height: 40px;
+    width: 100%;
+    
+ }
+ .type input{
+    width: 80%;
+    height: 35px;
+    background-color: rgb(154, 193, 191);
+    border-radius: 20px;
+    font-size: 20px;
+    border-bottom: none;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-left: 30px;
+ }
+ .type input::placeholder{
+    color: black;
+ }
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image: url("https://pbs.twimg.com/media/Cex8BlpWEAAPRED.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 98%;
+    background-image: url("https://pbs.twimg.com/media/Cex8BlpWEAAPRED.jpg");
+    /* background-color: rgba(0, 0, 0, 0.204); */
+    /* Slightly transparent */
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 1.05); */
+    display: flex;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a:hover {
+    color: black;
+    border-radius: 5px;
+}
+/* Header */
+header {
+    background: transparent;
+    color: #4d4e41;
+    padding: 20px 10px;
+    text-align: center;
+    margin-top: 50px;
+ 
+}
+
+
+main {
+    max-width: 800px;
+    margin: -32px auto 20px;
+
+    padding: 20px;
+    color: white;
+    background: rgba(128, 128, 128, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: auto;
+    overflow: auto;
+
+}
+
+h1,
+h2 {
+    color: #000000;
+}
+
+p {
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: disc;
+    margin: 10px 0 20px 20px;
+}
+
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.team-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    padding: 15px;
+}
+
+.team-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-card h3 {
+    margin: 10px 0 5px;
+    color: #4d4e41;
+    font-size: 1.2em;
+}
+
+.team-card p {
+    font-size: 0.9em;
+    color: #666;
+}

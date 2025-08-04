@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum Ticket</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            /* background: linear-gradient(to right, #6a11cb, #2575fc); Gradient background */
+            background-image: url(./ticket_bg.png);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+        .ticket {
+            background-image: url(./ticket.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* background: #ffffff; */
+            border-radius: 12px;
+            width: 350px;
+            padding: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .ticket:hover {
+            transform: scale(1.05);
+            /* Slightly enlarge on hover */
+        }
+
+        .ticket-header {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #2575fc;
+        }
+
+        .ticket-details {
+            margin: 20px 0;
+        }
+
+        .ticket-details p {
+            margin: 12px 0;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .ticket-details strong {
+            color: #2575fc;
+        }
+
+        .qr-code {
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .qr-code img {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .qr-code img:hover {
+            transform: scale(1.1);
+        }
+
+        .ticket-footer {
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 20px;
+        }
+
+        .perforation {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            border-top: 2px dashed #ccc;
+            transform: translateY(-50%);
+        }
+
+        .ticket-footer p {
+            margin: 5px 0;
+        }
+
+        .ticket-footer a {
+            color: #2575fc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .ticket-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ticket">
+        <div class="ticket-header">Kiran Nadar Museum of Art</div>
+
+        <div class="ticket-details">
+            <p><strong>Ticket Type:</strong> <span id="ticketType"></span></p>
+            <p><strong>Location:</strong> <span id="location"></span></p>
+            <p><strong>Date:</strong> <span id="date"></span></p>
+            <p><strong>No. of Visitors:</strong> <span id="visitors"></span></p>
+            <p><strong>Total:</strong> <span id="total"></span></p>
+        </div>
+
+        <div class="qr-code">
+            <img src="./confirmed.png" alt="QR Code">
+        </div>
+
+        <div class="perforation"></div>
+
+        <div class="ticket-footer">
+            <p>Thank you for visiting!</p>
+            <p>Visit us: <a href="https://www.Harshwardhan.in" target="_blank">www.Harshwardhan.in</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Retrieve ticket data from localStorage
+        document.getElementById('ticketType').textContent = localStorage.getItem('ticketType');
+        document.getElementById('location').textContent = localStorage.getItem('location');
+        document.getElementById('date').textContent = localStorage.getItem('date');
+        document.getElementById('visitors').textContent = localStorage.getItem('visitors');
+        document.getElementById('total').textContent = localStorage.getItem('totalPrice');
+    </script>
+</body>
+
+</html>
